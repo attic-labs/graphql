@@ -15,12 +15,12 @@ import (
 var SpecifiedRules = []ValidationRuleFn{
 	ArgumentsOfCorrectTypeRule,
 	DefaultValuesOfCorrectTypeRule,
-	FieldsOnCorrectTypeRule,
+	// FieldsOnCorrectTypeRule, <-- commented out for Attic
 	FragmentsOnCompositeTypesRule,
 	KnownArgumentNamesRule,
 	KnownDirectivesRule,
 	KnownFragmentNamesRule,
-	KnownTypeNamesRule,
+	// KnownTypeNamesRule, <-- commented out for Attic
 	LoneAnonymousOperationRule,
 	NoFragmentCyclesRule,
 	NoUndefinedVariablesRule,

@@ -210,6 +210,9 @@ func typeFromAST(schema Schema, inputTypeAST ast.Type) (Type, error) {
 			nameValue = inputTypeAST.Name.Value
 		}
 		ttype := schema.Type(nameValue)
+		if ttype == nil {
+			return nil, fmt.Errorf("Type %s not found", nameValue)
+		}
 		return ttype, nil
 	default:
 		return nil, invariant(inputTypeAST.GetKind() == kinds.Named, "Must be a named type.")
