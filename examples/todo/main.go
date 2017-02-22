@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/graphql-go/graphql"
+	"github.com/attic-labs/graphql"
 )
 
 type Todo struct {

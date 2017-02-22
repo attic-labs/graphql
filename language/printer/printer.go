@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/graphql-go/graphql/language/ast"
-	"github.com/graphql-go/graphql/language/visitor"
+	"github.com/attic-labs/graphql/language/ast"
+	"github.com/attic-labs/graphql/language/visitor"
 	"reflect"
 )
 
