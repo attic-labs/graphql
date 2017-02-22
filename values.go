@@ -317,9 +317,10 @@ func isValidInputValue(value interface{}, ttype Input) (bool, []string) {
 
 // Returns true if a value is null, undefined, or NaN.
 func isNullish(value interface{}) bool {
-	if value, ok := value.(string); ok {
-		return value == ""
-	}
+	// https://github.com/graphql-go/graphql/issues/183
+	// if value, ok := value.(string); ok {
+	// 	return value == ""
+	// }
 	if value, ok := value.(int); ok {
 		return math.IsNaN(float64(value))
 	}
